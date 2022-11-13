@@ -1,9 +1,24 @@
 package io.github.com.embfinformatica;
 
-public interface SplitterJob {
-    public void onBegin();
+public class SplitterJob {
 
-    public void onWrittingFile();
 
-    public void onFinished();
+    public static interface Split {
+
+        public void onBegin(String originName, long FileSize);
+
+        public void onWrittingFile(long currentByte, int multiply, long fileSize);
+
+        public void onEnd();
+    }
+
+    public static interface Merge {
+
+        public void onBegin(String originName, long fileSize);
+
+        public void onMergin(String currentFileName,long pieceInBytes, long fileSizeTotal);
+
+        public void onEnd();
+
+    }
 }

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="EduSplitter:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/EduSplitter_jar</output-path>
+    <root id="archive" name="EduSplitter.jar">
+      <element id="module-output" name="EduSplitter" />
+    </root>
+  </artifact>
+</component>
